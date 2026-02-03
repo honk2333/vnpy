@@ -29,7 +29,8 @@ function install-ta-lib()
 }
 function ta-lib-exists()
 {
-    $prefix/ta-lib-config --libs > /dev/null
+    prefix=/usr/local
+    $prefix/bin/ta-lib-config --libs > /dev/null
 }
 ta-lib-exists || install-ta-lib
 
